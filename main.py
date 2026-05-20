@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 from typing import Optional
 
 app = FastAPI(
-    title="CopyGrader API",
+    title="CopyLint API",
     description="Analyze marketing copy for vague promises, fluffery, and clickbait. Built by a 25-year marketing professional.",
     version="1.0.0"
 )
@@ -67,7 +67,7 @@ class AnalyzeRequest(BaseModel):
 @app.get("/")
 def root():
     return {
-        "api": "CopyGrader",
+        "api": "CopyLint",
         "version": "1.0.0",
         "description": "Analyze marketing copy for vague promises, fluffery, and clickbait",
         "endpoints": {
